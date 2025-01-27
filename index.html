@@ -3,65 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Est-ce que tu m'aimes ?</title>
+    <title>Ghiles, est-ce que tu m'aimes ?</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
             text-align: center;
-            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            background: linear-gradient(135deg, #ff9a9e, #fbc2eb, #a1c4fd);
             color: #333;
             margin: 0;
             padding: 0;
         }
         h1 {
-            margin-top: 20vh;
-            font-size: 3em;
+            margin-top: 15vh;
+            font-size: 3.5em;
+            color: #ff6f61;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
         }
         p {
-            font-size: 1.2em;
+            font-size: 1.4em;
             margin: 20px 0;
+            color: #444;
+        }
+        .hearts {
+            font-size: 2em;
+            color: #ff6f61;
         }
         .buttons {
-            margin-top: 20px;
+            margin-top: 30px;
         }
         button {
-            font-size: 1em;
-            padding: 10px 20px;
+            font-size: 1.2em;
+            padding: 15px 30px;
             margin: 10px;
             border: none;
-            border-radius: 5px;
+            border-radius: 50px;
             cursor: pointer;
             color: white;
-            transition: transform 0.2s ease;
-        }
-        .yes {
-            background-color: #4caf50;
-        }
-        .no {
-            background-color: #f44336;
+            background: linear-gradient(135deg, #f857a6, #ff5858);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         button:hover {
             transform: scale(1.1);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        }
+        button:active {
+            transform: scale(1);
+            box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
         }
         footer {
             position: absolute;
             bottom: 10px;
             width: 100%;
-            font-size: 0.8em;
+            font-size: 1em;
             color: #555;
+        }
+        .yes {
+            background: linear-gradient(135deg, #4caf50, #81c784);
+        }
+        .no {
+            background: linear-gradient(135deg, #f44336, #e57373);
         }
     </style>
 </head>
 <body>
-    <h1>Est-ce que tu m'aimes ?</h1>
-    <p>Je veux juste savoir ce que tu ressens 💕</p>
+    <h1>Ghiles, est-ce que tu m'aimes ?</h1>
+    <div class="hearts">❤️ 💕 💖 💕 ❤️</div>
+    <p>Je veux que tu sois honnête avec moi... 💌</p>
     <div class="buttons">
-        <button class="yes" onclick="alert('Moi aussi ❤️')">Oui</button>
-        <button class="no" onclick="alert('Oh... 😢')">Non</button>
+        <button class="yes" onclick="alert('Moi aussi Ghiles, je t’aime tellement ! ❤️')">Oui</button>
+        <button class="no" onclick="alert('Oh... c’est triste 😢 Mais je t’aimerai toujours.')">Non</button>
     </div>
     <footer>
-        Fait avec ❤️ pour toi.
+        Fait avec ❤️ pour Ghiles.
     </footer>
 </body>
-      </html>
-      
+</html>
