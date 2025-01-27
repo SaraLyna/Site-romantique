@@ -3,79 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ghiles, est-ce que tu m'aimes ?</title>
+    <title>À l'amour de ma vie, Ghiles</title>
     <style>
         body {
-            font-family: 'Comic Sans MS', cursive, sans-serif;
-            text-align: center;
-            background: linear-gradient(135deg, #ff9a9e, #fbc2eb, #a1c4fd);
-            color: #333;
+            font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-        }
-        h1 {
-            margin-top: 15vh;
-            font-size: 3.5em;
-            color: #ff6f61;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-        }
-        p {
-            font-size: 1.4em;
-            margin: 20px 0;
-            color: #444;
-        }
-        .hearts {
-            font-size: 2em;
-            color: #ff6f61;
-        }
-        .buttons {
-            margin-top: 30px;
-        }
-        button {
-            font-size: 1.2em;
-            padding: 15px 30px;
-            margin: 10px;
-            border: none;
-            border-radius: 50px;
-            cursor: pointer;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fbc2eb, #a1c4fd);
+            animation: gradient 10s ease infinite;
+            height: 100vh;
+            overflow: hidden;
             color: white;
-            background: linear-gradient(135deg, #f857a6, #ff5858);
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
         }
-        button:hover {
-            transform: scale(1.1);
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
-        button:active {
-            transform: scale(1);
-            box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+
+        h1 {
+            font-size: 3.5em;
+            margin-top: 20vh;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
         }
+
+        p {
+            font-size: 1.5em;
+            margin: 20px auto;
+            max-width: 800px;
+            line-height: 1.6;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .hearts-container {
+            position: relative;
+            height: 50vh;
+            overflow: hidden;
+        }
+
+        .heart {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background: red;
+            opacity: 0.8;
+            transform: rotate(45deg);
+            animation: float 7s infinite ease-in-out;
+        }
+
+        .heart::before, .heart::after {
+            content: "";
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background: red;
+            border-radius: 50%;
+        }
+
+        .heart::before {
+            top: -25px;
+            left: 0;
+        }
+
+        .heart::after {
+            left: 25px;
+            top: 0;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0) rotate(45deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-800px) rotate(45deg);
+                opacity: 0;
+            }
+        }
+
         footer {
             position: absolute;
             bottom: 10px;
             width: 100%;
-            font-size: 1em;
-            color: #555;
-        }
-        .yes {
-            background: linear-gradient(135deg, #4caf50, #81c784);
-        }
-        .no {
-            background: linear-gradient(135deg, #f44336, #e57373);
+            font-size: 1.2em;
+            color: #fefefe;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
         }
     </style>
 </head>
 <body>
-    <h1>Ghiles, est-ce que tu m'aimes ?</h1>
-    <div class="hearts">❤️ 💕 💖 💕 ❤️</div>
-    <p>Je veux que tu sois honnête avec moi... 💌</p>
-    <div class="buttons">
-        <button class="yes" onclick="alert('Moi aussi Ghiles, je t’aime tellement ! ❤️')">Oui</button>
-        <button class="no" onclick="alert('Oh... c’est triste 😢 Mais je t’aimerai toujours.')">Non</button>
+    <h1>Ghiles, tu es l'amour de ma vie</h1>
+    <p>Je voulais que tu saches à quel point tu es spécial pour moi.  
+        Tu es la lumière de mes jours, la douceur de mes nuits, et la personne avec qui je veux passer le reste de ma vie. 💕  
+        Merci d'exister, mon amour. Tu es tout pour moi. ❤️
+    </p>
+
+    <div class="hearts-container">
+        <!-- Générer des cœurs aléatoires -->
+        <div class="heart" style="top: 80%; left: 10%; animation-duration: 5s;"></div>
+        <div class="heart" style="top: 70%; left: 20%; animation-duration: 7s;"></div>
+        <div class="heart" style="top: 60%; left: 50%; animation-duration: 6s;"></div>
+        <div class="heart" style="top: 90%; left: 70%; animation-duration: 8s;"></div>
+        <div class="heart" style="top: 85%; left: 80%; animation-duration: 4s;"></div>
     </div>
+
     <footer>
-        Fait avec ❤️ pour Ghiles.
+        Fait avec ❤️ par quelqu'un qui t'aime profondément.
     </footer>
 </body>
 </html>
